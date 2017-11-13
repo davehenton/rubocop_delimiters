@@ -1,24 +1,29 @@
-# README
+From terminal:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```
+bundle install
 
-Things you may want to cover:
+$ rubocop test_delimiters.rb
 
-* Ruby version
+Inspecting 1 file
+.
 
-* System dependencies
+1 file inspected, no offenses detected
 
-* Configuration
+$ codeclimate analyze test_delimiters.rb
 
-* Database creation
+Starting analysis
+Running brakeman: Done!
+Running bundler-audit: Done!
+Running csslint: Done!
+Running duplication: Done!
+Running eslint: Done!
+Running fixme: Done!
+Running rubocop: Done!
 
-* Database initialization
+== test_delimiters.rb (2 issues) ==
+1: `%i`-literals should be delimited by `(` and `)`. [rubocop]
+2: `%w`-literals should be delimited by `(` and `)`. [rubocop]
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Analysis complete! Found 2 issues.
+```
